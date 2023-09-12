@@ -1,0 +1,38 @@
+// Global styles
+// These styles are available on all pages.
+// If a component has it's own styles, they can be found within the component's respective directory.
+
+@import 'breakpoints';
+@import 'css-variables';
+@import 'base';
+@import 'utilities';
+
+.section {
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 4em;
+  padding-left: 0;
+  display: flex;
+  list-style-type: none;
+
+  @media (max-width: $breakpoint-extra-small) {
+    display: block;
+  }
+}
+
+.shop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4em;
+  row-gap: 5em;
+  padding-left: 0;
+
+  @media (max-width: $breakpoint-extra-small) {
+    display: block;
+  }
+}
+
+.formOptionChecked {
+  border-color: var(--wpe--color--black);
+  box-shadow: 0 0 0 1px var(--wpe--color--black);
+}

@@ -1,0 +1,24 @@
+.buttonContainer {
+  @import 'styles/css-variables';
+
+  .button {
+    margin-top: 1em;
+    background-color: var(--wpe--color--green);
+    text-decoration: none;
+    font-size: 1em;
+    padding: 1rem;
+    min-width: 115px;
+    display: inline-block;
+    color: var(--wpe--color--white);
+    transition: all 0.5s;
+    cursor: pointer;
+    border: none;
+    &:hover {
+      background-color: var(--wpe--color--green);
+    }
+    &:disabled {
+      background-color: var(--wpe--color--grey);
+      pointer-events: none;
+    }
+  }
+}

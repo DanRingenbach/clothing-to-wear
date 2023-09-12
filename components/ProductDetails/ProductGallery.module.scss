@@ -1,0 +1,16 @@
+.productGallery {
+  @import 'styles/breakpoints';
+
+  display: flex;
+
+  @media (max-width: $breakpoint-small) {
+    margin-bottom: 2rem;
+  }
+
+  .imageGrid {
+    display: flex;
+    gap: 2em;
+    margin-top: 2em;
+    cursor: pointer;
+  }
+}

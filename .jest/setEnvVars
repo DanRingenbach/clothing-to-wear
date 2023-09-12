@@ -1,0 +1,2 @@
+process.env.NEXT_PUBLIC_SHOPIFY_GRAPHQL_URL='https://foo.com';
+process.env.NEXT_PUBLIC_SHOPIFY_HEADLESS_PUBLIC_ACCESS_TOKEN='bar';

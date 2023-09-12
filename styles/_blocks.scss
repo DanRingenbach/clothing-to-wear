@@ -1,0 +1,52 @@
+// WordPress block styles.
+// Used in `components/ContentWrapper`
+
+@use 'sass:math';
+
+@import '@wordpress/base-styles/mixins';
+@import '@wordpress/base-styles/colors.native';
+@import '@wordpress/base-styles/default-custom-properties';
+@import '@wordpress/base-styles/colors';
+@import '@wordpress/base-styles/variables';
+@import '@wordpress/base-styles/breakpoints';
+@import '@wordpress/block-library/src/style';
+
+// custom class set in blocks properties in Gutenberg sidebar
+.inner-blueprint-content,
+.outer-blueprint-block .wp-block-columns {
+  width: 1140px;
+  margin: 0 auto !important;
+}
+
+.outer-blueprint-hero .wp-block-columns {
+  .inner-hero {
+    padding: 2em;
+  }
+}
+
+.has-white-background-color {
+  background: var(--wpe--color--white);
+}
+
+.wp-block-cover__inner-container {
+  z-index: 999 !important;
+}
+
+.wp-block-button {
+  background-color: var(--wpe--color--black);
+  color: var(--wpe--color--white);
+
+  a {
+    color: var(--wpe--color--white);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color: var(--wpe--color--white);
+    }
+  }
+}
+
+.wp-block-heading {
+  margin-block: 1.5rem;
+}
