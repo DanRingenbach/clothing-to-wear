@@ -1,6 +1,7 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
 import {schemaTypes} from './schemas'
+import {visionTool} from '@sanity/vision'
 
 export default defineConfig({
   name: 'clothing-to-wear-nextjs-site',
@@ -11,7 +12,7 @@ export default defineConfig({
 
   basePath: "/studio",
 
-  plugins: [structureTool()],
+  plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,

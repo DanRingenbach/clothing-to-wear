@@ -1,8 +1,9 @@
 // app/page.tsx
 
 import { getProfile } from "@/sanity/sanity.query";
-
 import type { ProfileType } from "@/types";
+import RandomGallery from "../components/RandomGallery"
+import Job from "../components/Job"; // import job component
 
 
 export default async function Home() {
@@ -40,8 +41,8 @@ export default async function Home() {
               </ul>
             </div>
           ))}
-        {/* <HeroSvg /> */}
       </section>
+      <RandomGallery/>
     </main>
   );
 }

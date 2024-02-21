@@ -19,14 +19,14 @@ export type ProfileType = {
   skills: string[],
 };
 
- export interface GalleryImage {
-    asset: {
-      url: string;
-    };
-  }
-  
- export interface Gallery {
-    title: string;
-    description: string;
-    images: GalleryImage[];
-  }
+
+export type JobType = {
+  _id: string;
+  name: string;
+  jobTitle: string;
+  url: string;
+  description: string;
+  imageUrls: string[];
+  slug: string;
+ 
+};
