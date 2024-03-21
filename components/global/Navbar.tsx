@@ -29,7 +29,8 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/jobs"
+              target="_blank"
+                href="https://e861a6-36.myshopify.com/"
                 className="hover:text-purple-400 duration-300"
               >
                 clothing-to-wear
