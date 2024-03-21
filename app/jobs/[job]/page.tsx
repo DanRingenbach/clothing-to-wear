@@ -43,7 +43,7 @@ export default async function Job({ params }: Props) {
                 </div>
 
                 {job.imageUrls.map((image, index) =>
-                    <Image width={100} height={100} src={image} alt="gay" key={index} />
+                    <Image width={400} height={400} src={image} alt="gay" key={index} />
                 )}
 
             </div>

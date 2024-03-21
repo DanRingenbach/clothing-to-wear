@@ -31,7 +31,7 @@ export async function getJob() {
       url,
       description,
       'imageUrls' : imageArray[].asset->url,
-      'slug': slug.current 
+      'slug': slug.current
     }`
   );
 }
