@@ -15,9 +15,8 @@ export default async function Job() {
 
             <div className="">
                 {job.map((data) => (
-                    <Link href={`/jobs/${data.slug}`}>
+                    <Link key={data._id} href={`/jobs/${data.slug}`}>
                     <div
-                        key={data._id}
                         className=""
                     >
                        {data.imageUrls.map((image, index) =>
