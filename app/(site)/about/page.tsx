@@ -8,16 +8,18 @@ import { BiEnvelope, BiFile } from "react-icons/bi";
 
 export default async function About() {
   const profile: ProfileType[] = await getProfile();
+  
+
+ 
 
   return (
     <main className="lg:max-w-7xl mx-auto max-w-3xl md:px-16 px-6 bg-white text-black">
-  {profile &&
-    profile.map((data) => (
+  {profile && profile.map((data) => (
       <div key={data._id}>
         <section className="grid lg:grid-cols-2 grid-cols-1 gap-x-6 justify-items-center">
           <div className="order-2 lg:order-none">
             <h1 className="lg:text-5xl text-4xl lg:leading-tight basis-1/2 font-bold mb-8">
-              I&apos;m {data.fullName}. I live in {data.location}, where I design the future.
+              I&apos;m {data.fullName}
             </h1>
 
             <div className="flex flex-col gap-y-3 text-zinc-400 leading-relaxed">
@@ -27,6 +29,7 @@ export default async function About() {
 
           <div className="flex flex-col lg:justify-self-center justify-self-start gap-y-8 lg:order-1 order-none mb-12">
             <div>
+
               <Image
                 className="mb-4 object-cover max-h-96 min-h-96 bg-top bg-[#1d1d20]"
                 src={data.profileImage.image}
@@ -35,6 +38,7 @@ export default async function About() {
                 quality={100}
                 alt={data.profileImage.alt}
               />
+              
 
             </div>
 
@@ -48,6 +52,22 @@ export default async function About() {
                   {data.email}
                 </a>
               </li>
+              
+              {Object.entries(data.socialLinks)
+                    .sort()
+                    .map(([key, value], id) => (
+                      <li key={id}>
+                        <a
+                          href={value}
+                          rel="noreferer noopener"
+                          className="flex items-center gap-x-2 hover:text-purple-400 duration-300"
+                        >
+                        <BiFile className="text-lg" />
+                          {key[0].toUpperCase() + key.toLowerCase().slice(1)}
+                        </a>
+                      </li>
+                    ))}
+              
             </ul>
           </div>
         </section>

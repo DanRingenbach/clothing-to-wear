@@ -1,11 +1,10 @@
-// app/projects/[project]/page.tsx
+// app/jobs/[job]/page.tsx
 
 import Image from "next/image";
 import { Metadata } from "next";
 import { getSingleJob } from "@/sanity/sanity.query";
 import type { JobType } from "@/types";
-import { PortableText } from "@portabletext/react";
-import fallBackImage from "@/public/project.png";
+import ImageOverlay from "@/components/ImageOverlay";
 
 type Props = {
     params: {
@@ -41,11 +40,11 @@ export default async function Job({ params }: Props) {
                         {job.name}
                     </h1>
                 </div>
-
-                {job.imageUrls.map((image, index) =>
-                    <Image width={400} height={400} src={image} alt="gay" key={index} />
-                )}
-
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    {job.imageUrls.map((image, index) =>
+                        <ImageOverlay  imageUrl={image} key={index} />
+                    )}
+                </div>
             </div>
         </main>
     );

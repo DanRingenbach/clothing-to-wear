@@ -46,20 +46,10 @@ const profile = {
       type: "string",
     },
     {
-      name: "location",
-      title: "Location",
-      type: "string",
-    },
-    {
       name: "fullBio",
       title: "Full Bio",
       type: "array",
       of: [{ type: "block" }],
-    },
-    {
-      name: "resumeURL",
-      title: "Upload Resume",
-      type: "file",
     },
     {
       name: "socialLinks",
@@ -68,42 +58,18 @@ const profile = {
       description: "Add your social media links:",
       fields: [
         {
-          name: "github",
-          title: "Github URL",
+          name: "instagram",
+          title: "Instagram Url",
           type: "url",
-          initialValue: "https://github.com/",
-        },
-        {
-          name: "linkedin",
-          title: "Linkedin URL",
-          type: "url",
-          initialValue: "https://linkedin.com/in/",
-        },
-        {
-          name: "twitter",
-          title: "Twitter URL",
-          type: "url",
-          initialValue: "https://twitter.com/",
-        },
-        {
-          name: "twitch",
-          title: "Twitch URL",
-          type: "url",
-          initialValue: "https://twitch.com/",
-        },
+          initialValue: "https://instagram.com/",
+        }
+        
       ],
       options: {
         collapsed: false,
         collapsible: true,
         columns: 2,
       },
-    },
-    {
-      name: "skills",
-      title: "Skills",
-      type: "array",
-      description: "Add a list of skills",
-      of: [{ type: "string" }],
     },
  ],
 };
