@@ -21,7 +21,7 @@ const ImageOverlay: React.FC<ImageOverlayProps> = ({ imageUrl }) => {
       {isOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 flex justify-center items-center" onClick={toggleOverlay}>
           <div className="max-w-1/2 h-[calc(100vh)]">
-            <Image src={imageUrl} width={400} height={100} alt="Overlay" className="w-full h-full" />
+            <Image src={imageUrl} width={400} height={400} alt="Overlay" className="w-full" />
           </div>
         </div>
       )}
