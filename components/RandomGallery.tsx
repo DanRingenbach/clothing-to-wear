@@ -1,36 +1,23 @@
-'use client';
-
-import type { JobType } from "@/types";
-import { getSingleJob, getJob } from "@/sanity/sanity.query";
-
+// 'use client'
 import React, { useState, useEffect } from 'react';
 import Slider from "./CustomCarousel";
 
-export default function Job() {
-    const [job, setJob] = useState<JobType | null>(null);
-    const [slides, setSlides] = useState<string[]>([]);
+// Assuming synchronous versions of the functions are available
+import { getJob } from "@/sanity/sanity.query";
+import { JobType } from "@/types";
 
-    useEffect(() => {
-        async function fetchData() {
-            const jobs = await getJob();
-            const random = Math.floor(Math.random() * jobs.length);
-            const randomJob = jobs[random];
-            const jobData = await getSingleJob(randomJob.slug);
-            setJob(jobData);
-            setSlides(jobData.imageUrls);
-        }
+const random = function() {
+    Math.floor(Math.random() * 10)
+}
 
-        fetchData();
-    }, []);
-
-    if (!job) {
-        return null; // or Loading indicator
-    }
-
+export default async function Job(){
+    const job: JobType[] = await getJob();
+    const singleJob = job[Math.floor(Math.random() * job.length)]
+    const slides = singleJob.imageUrls
     return (
         <section className="">
             <div className="h-2/4 flex justify-center">
-                <div key={job._id} className="">
+                <div key={singleJob._id} className="">
                     <div>
                         <Slider slides={slides} />
                     </div>
