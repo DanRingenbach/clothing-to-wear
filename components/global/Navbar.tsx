@@ -7,7 +7,7 @@ export default function Navbar() {
     <header className="py-6 md:px-16 px-6 border-b border-zinc-800 z-30 md:mb-28 mb-20">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         <Link href="/">
-          <Image src={Logo} height={50} width={50} alt="CTW Logo"/>
+          <Image src={Logo} height={100} width={100} alt="CTW Logo"/>
           
         </Link>
         <nav>
@@ -28,7 +28,7 @@ export default function Navbar() {
                 Work
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
               target="_blank"
                 href="https://e861a6-36.myshopify.com/"
@@ -36,7 +36,7 @@ export default function Navbar() {
               >
                 clothing-to-wear
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

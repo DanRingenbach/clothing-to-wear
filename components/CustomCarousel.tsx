@@ -56,11 +56,11 @@ const Slider: React.FC<Props> = ({ slides }) => {
     return (
         <div className={`slider ${slideDirection} flex align-center`} onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}>
-            <button onClick={prevSlide}><FontAwesomeIcon icon={faChevronLeft} /></button>
+            <button className="pl-2" onClick={prevSlide}><FontAwesomeIcon icon={faChevronLeft} size={"lg"} /></button>
             <div className="slide">
                 <Image src={slides[currentSlideIndex]} alt="test" width={400} height={400} />
             </div>
-            <button onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} /></button>
+            <button className="pr-2" onClick={nextSlide}><FontAwesomeIcon icon={faChevronRight} size={"lg"}/></button>
         </div>
     );
 };
